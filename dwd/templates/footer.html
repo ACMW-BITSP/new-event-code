@@ -1,0 +1,17 @@
+<footer class="group">
+		<div class="container">
+			<nav class="foo-menu">
+					<ul>
+						<li><a href="#">Rules</a></li>
+						{% if user.is_authenticated %}
+					     	<li><a href="#">Sign Out</a></li>
+					    {% else %}
+					      <a href="{% url 'teams:register' %}" class="item">Register</a>
+					      <a href="{% url 'teams:login' %}" class="item">Login</a>
+					    {% endif %}
+						
+					</ul>
+				</nav>
+			<h6>&copy acm-w</h6>                                                 
+		</div>
+		</footer>
